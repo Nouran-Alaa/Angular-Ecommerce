@@ -1,6 +1,6 @@
 # 🛍️ Angular eCommerce Website
 
-This is a simple yet complete **eCommerce web application** built with **Angular** and **Bootstrap** as part of the final task for the Angular module in the **9-month Web and User Interface scholarship program at the Information Technology Institute (ITI)**.
+This is a simple yet complete **eCommerce web application** built with **Angular** and **Bootstrap**.
 
 ## 🚀 Project Overview
 
