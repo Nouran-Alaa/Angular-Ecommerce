@@ -1,0 +1,32 @@
+<div class="container p-5">
+  <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+    <div class="col" *ngFor="let prod of productList">
+      <div class="card h-100 shadow-sm border-0 rounded-4" appCustom>
+        <img
+          [src]="prod.prodImg"
+          class="card-img-top rounded-top-4"
+          alt="{{ prod.prodName }}"
+          style="object-fit: cover; height: 200px"
+        />
+        <div class="card-body">
+          <h5 class="card-title fw-bold">{{ prod.prodName }}</h5>
+          <p class="card-text text-muted">{{ prod.prodDesc }}</p>
+        </div>
+        <div class="card-footer bg-white border-0">
+          <div class="d-flex align-items-center">
+            <ng-container
+              *ngFor="let star of getStars(prod.prodRate); let i = index"
+            >
+              <i
+                class="bi"
+                [ngClass]="
+                  star ? 'bi-star-fill text-warning' : 'bi-star text-muted'
+                "
+              ></i>
+            </ng-container>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

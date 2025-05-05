@@ -1,0 +1,105 @@
+/* You can add global styles to this file, and also import other style files */
+.background-blur {
+  position: absolute;
+  inset-inline: 0;
+  top: -40px;
+  z-index: -10;
+  transform: translateZ(0); /* GPU acceleration */
+  overflow: hidden;
+  filter: blur(60px);
+}
+
+@media (min-width: 640px) {
+  .background-blur {
+    top: -80px;
+    top: calc(30% - 30rem);
+  }
+}
+
+.background-shape {
+  position: relative;
+  left: calc(50% - 11rem);
+  width: 36.125rem;
+  aspect-ratio: 1155 / 678;
+  transform: translateX(-50%) rotate(30deg);
+  background: linear-gradient(to top right, #ff80b5, #9089fc);
+  opacity: 0.3;
+  clip-path: polygon(
+    74.1% 44.1%,
+    100% 61.6%,
+    97.5% 26.9%,
+    85.5% 0.1%,
+    80.7% 2%,
+    72.5% 32.5%,
+    60.2% 62.4%,
+    52.4% 68.1%,
+    47.5% 58.3%,
+    45.2% 34.5%,
+    27.5% 76.7%,
+    0.1% 64.9%,
+    17.9% 100%,
+    27.6% 76.8%,
+    76.1% 97.7%,
+    74.1% 44.1%
+  );
+}
+
+@media (min-width: 640px) {
+  .background-shape {
+    left: calc(50% - 30rem);
+    width: 72.1875rem;
+  }
+}
+
+.bg-container {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: calc(50% - 13rem); /* fallback */
+  z-index: -10;
+  overflow: hidden;
+  filter: blur(64px);
+  transform: translateZ(0); /* GPU acceleration */
+
+  /* Responsive */
+}
+@media (min-width: 640px) {
+  .bg-container {
+    top: calc(100% - 30rem);
+  }
+}
+
+.bg-shape {
+  position: relative;
+  left: calc(50% + 3rem);
+  width: 36.125rem;
+  aspect-ratio: 1155 / 678;
+  transform: translateX(-50%);
+  background: linear-gradient(to top right, #ff80b5, #9089fc);
+  opacity: 0.3;
+  clip-path: polygon(
+    74.1% 44.1%,
+    100% 61.6%,
+    97.5% 26.9%,
+    85.5% 0.1%,
+    80.7% 2%,
+    72.5% 32.5%,
+    60.2% 62.4%,
+    52.4% 68.1%,
+    47.5% 58.3%,
+    45.2% 34.5%,
+    27.5% 76.7%,
+    0.1% 64.9%,
+    17.9% 100%,
+    27.6% 76.8%,
+    76.1% 97.7%,
+    74.1% 44.1%
+  );
+}
+
+@media (min-width: 640px) {
+  .bg-shape {
+    left: calc(50% + 36rem);
+    width: 72.1875rem;
+  }
+}

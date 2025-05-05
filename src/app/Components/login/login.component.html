@@ -1,0 +1,86 @@
+<section class="vh-100">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-6 text-black mt-5">
+        <div class="px-5 mt-5">
+          <span class="h1 fw-bold mb-0"
+            ><img style="width: 140px" src="/logo.png"
+          /></span>
+        </div>
+
+        <div [formGroup]="loginForm" class="my-3 mx-5 p-4">
+          <!-- Full Name -->
+          <div class="form-floating mb-3 has-validation">
+            <input
+              type="text"
+              class="form-control"
+              id="userName"
+              placeholder="Username"
+              required
+              [class.is-invalid]="
+                loginForm.controls.userName.invalid &&
+                (loginForm.controls.userName.dirty ||
+                  loginForm.controls.userName.touched)
+              "
+              formControlName="userName"
+            />
+            <label for="userName">Username</label>
+            <div class="invalid-feedback">
+              Username must be at least 3 characters.
+            </div>
+          </div>
+
+          <!-- Password -->
+          <div class="form-floating mb-3 has-validation">
+            <input
+              type="password"
+              class="form-control"
+              id="password"
+              placeholder="Password"
+              required
+              [class.is-invalid]="
+                loginForm.controls.password.invalid &&
+                (loginForm.controls.password.dirty ||
+                  loginForm.controls.password.touched)
+              "
+              formControlName="password"
+            />
+            <label for="password">Password</label>
+            <div class="invalid-feedback">
+              Password must be at least 6 characters.
+            </div>
+          </div>
+
+          <div class="pt-1 mb-4">
+            <button
+              data-mdb-button-init
+              data-mdb-ripple-init
+              class="btn btn-success btn-lg btn-block"
+              (click)="login()"
+              [disabled]="loginForm.invalid"
+              type="button"
+            >
+              Login
+            </button>
+          </div>
+
+          <p class="small mb-5 pb-lg-2">
+            <a class="text-muted" routerLink="/login">Forgot password?</a>
+          </p>
+          <p>
+            Don't have an account?
+            <a class="link-success" routerLink="/register">Register here</a>
+          </p>
+        </div>
+      </div>
+      <div class="col-sm-6 px-0 d-none d-sm-block">
+        <img
+          src="/login.jpg"
+          alt="Login image"
+          class="w-100 vh-100"
+          style="object-fit: cover; object-position: left"
+        />
+      </div>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,97 @@
+<h2 class="text-black-50 p-1 text-center mt-5">Add Product</h2>
+
+<div
+  [formGroup]="myProdForm"
+  class="my-3 p-4 border border-2 border-secondary rounded-3 bg-white shadow reg-form"
+>
+  <!-- Product Name -->
+  <div class="form-floating mb-3 has-validation">
+    <input
+      type="text"
+      class="form-control"
+      id="prodName"
+      placeholder="Product Name"
+      required
+      [class.is-invalid]="
+        myProdForm.controls.prodName.invalid &&
+        (myProdForm.controls.prodName.dirty ||
+          myProdForm.controls.prodName.touched)
+      "
+      formControlName="prodName"
+    />
+    <label for="prodName">Product Name</label>
+    <div class="invalid-feedback">Name must be at least 3 characters.</div>
+  </div>
+
+  <!-- Product Description -->
+  <div class="form-floating mb-3 has-validation">
+    <input
+      type="text"
+      class="form-control"
+      id="prodDesc"
+      placeholder="Product Description"
+      required
+      [class.is-invalid]="
+        myProdForm.controls.prodDesc.invalid &&
+        (myProdForm.controls.prodDesc.dirty ||
+          myProdForm.controls.prodDesc.touched)
+      "
+      formControlName="prodDesc"
+    />
+    <label for="prodDesc">Product Description</label>
+    <div class="invalid-feedback">
+      Description must be at least 10 characters.
+    </div>
+  </div>
+
+  <!-- Product Image URL -->
+  <div class="form-floating mb-3 has-validation">
+    <input
+      type="text"
+      class="form-control"
+      id="prodImg"
+      placeholder="Product Image URL"
+      required
+      [class.is-invalid]="
+        myProdForm.controls.prodImg.invalid &&
+        (myProdForm.controls.prodImg.dirty ||
+          myProdForm.controls.prodImg.touched)
+      "
+      formControlName="prodImg"
+    />
+    <label for="prodImg">Product Image URL</label>
+    <div class="invalid-feedback">
+      Image URL must be valid (begins with http or https).
+    </div>
+  </div>
+
+  <!-- Product Rate -->
+  <div class="form-floating mb-4 has-validation">
+    <input
+      type="text"
+      class="form-control"
+      id="prodRate"
+      placeholder="Product Rate"
+      required
+      [class.is-invalid]="
+        myProdForm.controls.prodRate.invalid &&
+        (myProdForm.controls.prodRate.dirty ||
+          myProdForm.controls.prodRate.touched)
+      "
+      formControlName="prodRate"
+    />
+    <label for="prodRate">Product Rate</label>
+    <div class="invalid-feedback">Rate must be between 1 and 5.</div>
+  </div>
+
+  <!-- Add Button -->
+  <div class="text-center">
+    <button
+      class="btn btn-outline-success border-2 px-4"
+      (click)="addProduct()"
+      [disabled]="myProdForm.invalid"
+    >
+      ADD
+    </button>
+  </div>
+</div>

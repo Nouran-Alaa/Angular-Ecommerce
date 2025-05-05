@@ -1,0 +1,9 @@
+<app-nav-bar *ngIf="!hideNavAndFooter()"></app-nav-bar>
+<div class="background-blur" aria-hidden="true">
+  <div class="background-shape"></div>
+</div>
+<router-outlet></router-outlet>
+<div *ngIf="!hideNavAndFooter()" class="bg-container" aria-hidden="true">
+  <div class="bg-shape"></div>
+</div>
+<app-footer *ngIf="!hideNavAndFooter()"></app-footer>
