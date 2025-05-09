@@ -1,4 +1,4 @@
-# 🛍️ Angular eCommerce Website
+# 🛍️ Shopular
 
 This is a simple yet complete **eCommerce web application** built with **Angular** and **Bootstrap**.
 
